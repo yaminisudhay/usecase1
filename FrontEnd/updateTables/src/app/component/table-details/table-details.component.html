@@ -1,0 +1,12 @@
+<form #updateForm="ngForm" (ngSubmit)="manualUpdate()">
+    <div class="form-container">
+        <h2>Screen 1</h2>
+        <input #tabName="ngModel" name="table" class="text-box" type="text" placeholder="Table Name" [(ngModel)]="tableName" required>
+    
+        <input #uniqCol="ngModel" name="ucol" class="text-box" type="text" placeholder="Unique Column" [(ngModel)]="uniqueColumn">
+    
+        <input #colName="ngModel" name="col" class="text-box" type="text" placeholder="Column Name" [(ngModel)]="columnName" required>
+    
+        <button type="submit" class="btn">Manual Update</button>
+    </div>
+</form>

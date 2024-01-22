@@ -1,0 +1,21 @@
+<form #updateForm="ngForm" (ngSubmit)="updateDetails()" name="update">
+    <div class="table-container">
+        <h2>Screen 2</h2>
+        <table class="tab-style">
+            <tr class="row-style">
+                <th style="background-color: yellow; border: 1px black solid;">Table Name</th>
+                <th style="background-color: yellow; border: 1px black solid;">Column Name</th>
+                <th style="background-color: rgb(111, 228, 107); border: 1px black solid;">Distinct Value</th>
+                <th style="background-color: rgb(255, 138, 42); border: 1px black solid;">User Input</th>
+            </tr>
+            <tr *ngFor="let e of newList" class="row-style">
+                <td>{{tabName}}</td>
+                <td>{{colName}}</td>
+                <td><label name="oldName">{{e.oldName}}</label>
+                </td>
+                <td><input #newName="ngModel" name="newName" [(ngModel)]="e.newName" type="text" name="userInput"></td>
+            </tr>
+        </table>
+        <button type="submit">Update</button>
+    </div>
+</form>
